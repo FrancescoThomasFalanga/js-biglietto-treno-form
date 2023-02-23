@@ -36,6 +36,7 @@ let inputUserNameEl = document.getElementById("userName");
 let inputUserAgeEl = document.getElementById("userAge");
 let inputTotKmEl = document.getElementById("totKm");
 let ticketGeneratorButtonEl = document.getElementById("ticketGeneratorButton");
+let ticketCancelButtonEl = document.getElementById("ticketCancelButton");
 
 
 // Inizio a targhettare il Button e aggiungo una funzione al suo interno per effettuare tutti i calcoli necessari
@@ -77,5 +78,12 @@ ticketGeneratorButtonEl.addEventListener("click", function() {
     document.getElementById("offerta").innerHTML = offerta;
     document.getElementById("totSconto").innerHTML = scontoPrevisto;
     document.getElementById("totale").innerHTML = totEuro.toFixed(2);
+
+    document.getElementById("myTicketNone").style.display = "block";
+
 })
 
+// Aggiungo nel caso si volesse annullare il biglietto il tasto di cancella
+ticketCancelButtonEl.addEventListener("click", function() {
+    document.getElementById("myTicketNone").style.display = "none";
+})

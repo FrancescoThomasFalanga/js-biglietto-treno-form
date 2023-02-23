@@ -44,7 +44,7 @@
             
             <div class="flex justify-center">
                 <button id="ticketGeneratorButton"> <span>Genera</span> </button>
-                <button id=""> <span>Annulla</span> </button>
+                <button id="ticketCancelButton"> <span>Annulla</span> </button>
             </div>
             
         </div>
@@ -53,36 +53,38 @@
 
 
         <!-- IL TUO BIGLIETTO -->
-        <h1>IL TUO BIGLIETTO</h1>
-
-        <div class="centered-container second-border">
+        <div id="myTicketNone">
+            <h1>IL TUO BIGLIETTO</h1>
     
-                <div>
-                    <h2>DETTAGLIO PASSEGGERI</h2>
-                </div>
-    
-                <div class="flex special-border special-margin" style="align-items: inherit;">
+            <div class="centered-container second-border">
+        
                     <div>
-                        <h2>NOME PASSEGGERO</h2>
-                        <h3 id="passengerName"></h3>
+                        <h2>DETTAGLIO PASSEGGERI</h2>
                     </div>
-    
-                    <div>
-                        <strong>Offerta</strong>
-                        <h6 id="offerta"></h6>
+        
+                    <div class="flex special-border special-margin" style="align-items: inherit;">
+                        <div>
+                            <h2>NOME PASSEGGERO</h2>
+                            <h3 id="passengerName"></h3>
+                        </div>
+        
+                        <div>
+                            <strong>Offerta</strong>
+                            <h6 id="offerta"></h6>
+                        </div>
+        
+                        <div>
+                            <strong>Sconto Previsto</strong>
+                            <h6 id="totSconto"></h6>
+                        </div>
+        
+                        <div>
+                            <strong>Costo Totale</strong>
+                            <h6 id="totale"></h6>
+                        </div>
                     </div>
-    
-                    <div>
-                        <strong>Sconto Previsto</strong>
-                        <h6 id="totSconto"></h6>
-                    </div>
-    
-                    <div>
-                        <strong>Costo Totale</strong>
-                        <h6 id="totale"></h6>
-                    </div>
-                </div>
-    
+        
+            </div>
         </div>
         <!-- /IL TUO BIGLIETTO -->
     </div>
