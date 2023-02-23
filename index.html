@@ -10,26 +10,40 @@
 </head>
 <body>
     
-    <div>
-        <label for="userName">Come ti chiami?</label>
-        <input id="userName" type="text">
-    </div>
+    <div class="centered-container">
 
-    <div>
-        <label for="userAge">Quanti anni hai?</label>
-        <input id="userAge" type="number">
-    </div>
+        <div class="flex">
 
-    <div>
-        <label for="totKm">Quanti Km vuoi percorrere?</label>
-        <input id="totKm" type="number">
-    </div>
+            <div class="flex column">
+                <h4>Come ti chiami?</h4>
+                <label for="userName"></label>
+                <input id="userName" type="text">
+            </div>
+        
+            <div class="flex column">
+                <h4>Quanti anni hai?</h4>
+                <label for="userAge"></label>
+                <input id="userAge" type="number">
+            </div>
+        
+            <div class="flex column">
+                <h4>Quanti Km vuoi percorrere?</h4>
+                <label for="totKm"></label>
+                <input id="totKm" type="number">
+            </div>
+
+        </div>
 
     
+        
+    
+        <div class="flex justify-center">
+            <button id="ticketGeneratorButton"> <span>Genera</span> </button>
+        </div>
 
-    <div>
-        <button id="ticketGeneratorButton"></button>
+
     </div>
+
 
     <script type="text/javascript" src="js/script.js"></script>
 </body>
