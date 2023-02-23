@@ -31,6 +31,7 @@ body {
     border-bottom-right-radius: 30px;
     padding: 60px;
     background-color: #f4e4a9;
+    box-shadow: 4px 3px 3px #74d48c;
 }
 /* __________________________________________________ */
 .second-border {
