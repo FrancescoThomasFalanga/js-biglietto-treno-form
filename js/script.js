@@ -29,21 +29,40 @@ Il recap dei dati e l'output del prezzo finale, andranno quindi stampati in pagi
 Questo richiederà un minimo di ricerca.
 */
 
-let totKm = prompt("Quanti chilometri vuoi percorrere?");
-let userAge = prompt("Qual è l'età del passeggero?");
-let totEuro = (totKm * 0.21).toFixed(2);
+
+let inputUserNameEl = document.getElementById("userName");
+let inputUserAgeEl = document.getElementById("userAge");
+let inputTotKmEl = document.getElementById("totKm");
+let ticketGeneratorButtonEl = document.getElementById("ticketGeneratorButton");
+
+ticketGeneratorButtonEl.addEventListener("click", function() {
+    let userName = inputUserNameEl.value;
+    console.log(userName);
+
+    let userAge = inputUserAgeEl.value;
+    console.log(userAge);
+
+    let totKm = inputTotKmEl.value;
+    console.log(totKm);
+
+})
 
 
-if(userAge < 18) {
 
-    console.log(`${(totEuro - ((totEuro * 20) / 100)).toFixed(2)} euro.`);
 
-} else if(userAge >= 65) {
 
-    console.log(`${(totEuro - ((totEuro * 40) / 100)).toFixed(2)} euro.`);
+// let totEuro = (inputTotKmEl.value * 0.21).toFixed(2);
 
-} else {
+// if(inputUserAgeEl.value < 18) {
 
-    console.log(`${totEuro} euro.`);
+//     console.log(`${(totEuro - ((totEuro * 20) / 100)).toFixed(2)} euro.`);
 
-}
+// } else if(inputUserAgeEl.value >= 65) {
+
+//     console.log(`${(totEuro - ((totEuro * 40) / 100)).toFixed(2)} euro.`);
+
+// } else {
+
+//     console.log(totEuro);
+
+// }
