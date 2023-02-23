@@ -53,11 +53,8 @@ ticketGeneratorButtonEl.addEventListener("click", function() {
     let totEuro = (inputTotKmEl.value * 0.21);
     console.log(totEuro);
 
-    let offerta = "Biglietto Standard";
-    console.log(offerta);
-
-    let scontoPrevisto = "Nessuno Sconto";
-    console.log(scontoPrevisto);
+    let offerta = "";
+    let scontoPrevisto = "";
 
 
     // Aggiungo il SE e l'ALTRIMENTI per le varie offerte in base alla fascia d'età
