@@ -28,3 +28,22 @@ Il recap dei dati e l'output del prezzo finale, andranno quindi stampati in pagi
 (il prezzo dovrà essere formattato con massimo due decimali, per indicare i centesimi sul prezzo). 
 Questo richiederà un minimo di ricerca.
 */
+
+let totaleKm = prompt("Quanti chilometri vuoi percorrere?");
+let userAge = prompt("Qual è l'età del passeggero?");
+let totEuro = (totaleKm * 0.21).toFixed(2);
+
+
+if(userAge < 18) {
+
+    console.log(`${(totEuro - ((totEuro * 20) / 100)).toFixed(2)} euro.`);
+
+} else if(userAge >= 65) {
+
+    console.log(`${(totEuro - ((totEuro * 40) / 100)).toFixed(2)} euro.`);
+
+} else {
+
+    console.log(`${totEuro} euro.`);
+    
+}
