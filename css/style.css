@@ -1,72 +1,109 @@
+/* General Settings */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-
+/* __________________________________________________ */
 body {
+    font-family: 'Montserrat', sans-serif;
     background-color: #95cea3;
     color: #5e2514;
 }
+/* /General Settings */
 
+
+
+/* A centered container */
+.margin {
+    margin-top: 80px;
+    margin-bottom: 80px;
+}
+/* __________________________________________________ */
 .centered-container {
     max-width: 1200px;
-    margin: 150px auto;
-    padding: 80px;
+    margin-left: auto;
+    margin-right: auto;
+}
+/* __________________________________________________ */
+.first-border {
     border-top-left-radius: 30px;
     border-bottom-right-radius: 30px;
+    padding: 60px;
     background-color: #f4e4a9;
 }
+/* __________________________________________________ */
+.second-border {
+    border-top-right-radius: 30px;
+    border-bottom-left-radius: 30px;
+    padding: 40px;
+    background-color: #f4e4a9;
+}
+/* /A centered container */
 
+
+
+/* Display Flex with his properties */
 .flex {
     display: flex;
     justify-content: space-between;
     align-items: center;
-
 }
-
+/* __________________________________________________ */
 .column {
     flex-direction: column;
 }
-
+/* __________________________________________________ */
 .justify-center {
     justify-content: center;
-    margin-top: 40px;
+    gap: 30px;
+    margin-top: 50px;
 }
+/* __________________________________________________ */
+.justify-around {
+    justify-content: space-around;
+}
+/* __________________________________________________ */
+.justify-start {
+    justify-content: flex-start;
+    align-items: start;
+}
+/* /Display Flex with his properties */
 
+
+
+/* Styling */
+h1 {
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 16px;
+}
+/* __________________________________________________ */
 h4 {
     margin-bottom: 12px;
 }
-
+/* __________________________________________________ */
 input {
     border-radius: 80px;
     border-color: #aa834a;
-    padding: 5px;
+    padding: 9px 8px;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/* __________________________________________________ */
+.special-border {
+    border-top: 2px solid #95cea3;
+    border-bottom: 2px solid #95cea3;
+    padding: 10px 16px;
+}
+/* __________________________________________________ */
+.special-margin {
+    padding-top: 20px;
+    padding-bottom: 80px;
+}
+/* /Styling */
 
 
 
 /* Cosa strana che ho voluto aggiungere per dare un po' più di stilizzazione */
-
 button {
     outline: none;
     cursor: pointer;
@@ -84,38 +121,38 @@ button {
     overflow: hidden;
     background: #aa834a;
     color: #f4e4a9;
-   }
-   
-   button span {
+}
+/* __________________________________________________ */ 
+button span {
     position: relative;
     z-index: 10;
     transition: color 0.4s;
-   }
-   
-   button:hover span {
+}
+/* __________________________________________________ */
+button:hover span {
     color: #5e2514;
-   }
-   
-   button::before,
-   button::after {
+}
+/* __________________________________________________ */ 
+button::before,
+button::after {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     z-index: 0;
-   }
-   
-   button::before {
+}
+/* __________________________________________________ */
+button::before {
     content: "";
     background: #5e2514;
     width: 120%;
     left: -10%;
     transform: skew(30deg);
     transition: transform 0.4s cubic-bezier(0.3, 1, 0.8, 1);
-   }
-   
-   button:hover::before {
+}
+/* __________________________________________________ */ 
+button:hover::before {
     transform: translate3d(100%, 0, 0);
-   }
-   
+}
+/* Cosa strana che ho voluto aggiungere per dare un po' più di stilizzazione */

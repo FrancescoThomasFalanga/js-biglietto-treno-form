@@ -7,41 +7,79 @@
     <title>Biglietto Treno Form</title>
 
     <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;1,300&display=swap" rel="stylesheet">
 </head>
 <body>
     
-    <div class="centered-container">
+    <div class="margin">
 
-        <div class="flex">
-
-            <div class="flex column">
-                <h4>Come ti chiami?</h4>
-                <label for="userName"></label>
-                <input id="userName" type="text">
-            </div>
-        
-            <div class="flex column">
-                <h4>Quanti anni hai?</h4>
-                <label for="userAge"></label>
-                <input id="userAge" type="number">
-            </div>
-        
-            <div class="flex column">
-                <h4>Quanti Km vuoi percorrere?</h4>
-                <label for="totKm"></label>
-                <input id="totKm" type="number">
-            </div>
-
-        </div>
-
+        <h1>CALCOLA IL PREZZO DEL TUO BIGLIETTO</h1>
     
-        
+        <div class="centered-container first-border">
     
-        <div class="flex justify-center">
-            <button id="ticketGeneratorButton"> <span>Genera</span> </button>
+            <div class="flex justify-around">
+                <div class="flex column">
+                    <h4>Come ti chiami?</h4>
+                    <label for="userName"></label>
+                    <input id="userName" type="text">
+                </div>
+            
+                <div class="flex column">
+                    <h4>Quanti anni hai?</h4>
+                    <label for="userAge"></label>
+                    <input id="userAge" type="number">
+                </div>
+            
+                <div class="flex column">
+                    <h4>Quanti Km vuoi percorrere?</h4>
+                    <label for="totKm"></label>
+                    <input id="totKm" type="number">
+                </div>
+    
+            </div>
+    
+            
+            <div class="flex justify-center">
+                <button id="ticketGeneratorButton"> <span>Genera</span> </button>
+                <button id=""> <span>Annulla</span> </button>
+            </div>
+            
         </div>
+        
 
+        <h1>IL TUO BIGLIETTO</h1>
 
+        <div class="centered-container second-border">
+    
+                <div>
+                    <h2>DETTAGLIO PASSEGGERI</h2>
+                </div>
+    
+                <div class="flex special-border special-margin">
+                    <div>
+                        <h2>NOME PASSEGGERO</h2>
+                        <h3 id="userName"></h3>
+                    </div>
+    
+                    <div>
+                        <h5>Offerta</h5>
+                        <h6 id="offerta"></h6>
+                    </div>
+    
+                    <div>
+                        <h5>Sconto Previsto</h5>
+                        <h6 id="totSconto"></h6>
+                    </div>
+    
+                    <div>
+                        <h5>Costo Totale</h5>
+                        <h6 id="totEuro"></h6>
+                    </div>
+                </div>
+    
+        </div>
     </div>
 
 
