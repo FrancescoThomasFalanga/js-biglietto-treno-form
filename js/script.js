@@ -45,13 +45,13 @@ ticketGeneratorButtonEl.addEventListener("click", function() {
     let totKm = inputTotKmEl.value;
     console.log(totKm);
 
+
+    let totEuro = (inputTotKmEl.value * 0.21).toFixed(2);
+    console.log(totEuro);
+
 })
 
 
-
-
-
-// let totEuro = (inputTotKmEl.value * 0.21).toFixed(2);
 
 // if(inputUserAgeEl.value < 18) {
 
