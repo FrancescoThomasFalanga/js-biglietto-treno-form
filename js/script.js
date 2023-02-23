@@ -29,9 +29,9 @@ Il recap dei dati e l'output del prezzo finale, andranno quindi stampati in pagi
 Questo richiederà un minimo di ricerca.
 */
 
-let totaleKm = prompt("Quanti chilometri vuoi percorrere?");
+let totKm = prompt("Quanti chilometri vuoi percorrere?");
 let userAge = prompt("Qual è l'età del passeggero?");
-let totEuro = (totaleKm * 0.21).toFixed(2);
+let totEuro = (totKm * 0.21).toFixed(2);
 
 
 if(userAge < 18) {
@@ -45,5 +45,5 @@ if(userAge < 18) {
 } else {
 
     console.log(`${totEuro} euro.`);
-    
+
 }
