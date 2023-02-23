@@ -87,6 +87,7 @@ input {
     border-radius: 80px;
     border-color: #aa834a;
     padding: 9px 8px;
+    text-align: center;
 }
 /* __________________________________________________ */
 .special-border {
@@ -96,8 +97,13 @@ input {
 }
 /* __________________________________________________ */
 .special-margin {
-    padding-top: 20px;
-    padding-bottom: 80px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+/* __________________________________________________ */ 
+#offerta, #totSconto, #totale {
+    margin-top: 50px;
+    font-size: 13px;
 }
 /* /Styling */
 

@@ -43,32 +43,42 @@ ticketGeneratorButtonEl.addEventListener("click", function() {
     let userName = inputUserNameEl.value;
     console.log(userName);
 
-    let userAge = inputUserAgeEl.value;
+    let userAge = parseInt(inputUserAgeEl.value);
     console.log(userAge);
 
-    let totKm = inputTotKmEl.value;
+    let totKm = parseInt(inputTotKmEl.value);
     console.log(totKm);
 
     // Calcolo il prezzo del Biglietto STANDARD
-    let totEuro = (inputTotKmEl.value * 0.21).toFixed(2);
+    let totEuro = (inputTotKmEl.value * 0.21);
     console.log(totEuro);
 
-    let offerta = "Offerta Standard";
+    let offerta = "Biglietto Standard";
     console.log(offerta);
+
+    let scontoPrevisto = "Nessuno Sconto";
+    console.log(scontoPrevisto);
 
 
     // Aggiungo il SE e l'ALTRIMENTI per le varie offerte in base alla fascia d'età
     if(inputUserAgeEl.value < 18) {
 
-        console.log(`${(totEuro - ((totEuro * 20) / 100)).toFixed(2)}`);
+        totEuro = totEuro - ((totEuro * 20) / 100);
+        offerta = "Biglietto Scontato";
+        scontoPrevisto = "20%"
     
     } else if(inputUserAgeEl.value >= 65) {
     
-        console.log(`${(totEuro - ((totEuro * 40) / 100)).toFixed(2)}`);
-    
-    } else {
-    
-        console.log(totEuro);
+        totEuro = totEuro - ((totEuro * 40) / 100);
+        offerta = "Biglietto Scontato";
+        scontoPrevisto = "40%"
     
     }
+
+    // Generiamo il biglietto...
+    document.getElementById("passengerName").innerHTML = userName;
+    document.getElementById("offerta").innerHTML = offerta;
+    document.getElementById("totSconto").innerHTML = scontoPrevisto;
+    document.getElementById("totale").innerHTML = totEuro.toFixed(2);
 })
+
