@@ -30,11 +30,15 @@ Questo richiederà un minimo di ricerca.
 */
 
 
+
+// Imposto condizioni
 let inputUserNameEl = document.getElementById("userName");
 let inputUserAgeEl = document.getElementById("userAge");
 let inputTotKmEl = document.getElementById("totKm");
 let ticketGeneratorButtonEl = document.getElementById("ticketGeneratorButton");
 
+
+// Inizio a targhettare il Button e aggiungo una funzione al suo interno per effettuare tutti i calcoli necessari
 ticketGeneratorButtonEl.addEventListener("click", function() {
     let userName = inputUserNameEl.value;
     console.log(userName);
@@ -45,24 +49,26 @@ ticketGeneratorButtonEl.addEventListener("click", function() {
     let totKm = inputTotKmEl.value;
     console.log(totKm);
 
-
+    // Calcolo il prezzo del Biglietto STANDARD
     let totEuro = (inputTotKmEl.value * 0.21).toFixed(2);
     console.log(totEuro);
 
+    let offerta = "Offerta Standard";
+    console.log(offerta);
+
+
+    // Aggiungo il SE e l'ALTRIMENTI per le varie offerte in base alla fascia d'età
+    if(inputUserAgeEl.value < 18) {
+
+        console.log(`${(totEuro - ((totEuro * 20) / 100)).toFixed(2)}`);
+    
+    } else if(inputUserAgeEl.value >= 65) {
+    
+        console.log(`${(totEuro - ((totEuro * 40) / 100)).toFixed(2)}`);
+    
+    } else {
+    
+        console.log(totEuro);
+    
+    }
 })
-
-
-
-// if(inputUserAgeEl.value < 18) {
-
-//     console.log(`${(totEuro - ((totEuro * 20) / 100)).toFixed(2)} euro.`);
-
-// } else if(inputUserAgeEl.value >= 65) {
-
-//     console.log(`${(totEuro - ((totEuro * 40) / 100)).toFixed(2)} euro.`);
-
-// } else {
-
-//     console.log(totEuro);
-
-// }
