@@ -58,30 +58,38 @@ ticketGeneratorButtonEl.addEventListener("click", function() {
     let scontoPrevisto = "Nessuno Sconto";
 
 
-    // Aggiungo il SE e l'ALTRIMENTI per le varie offerte in base alla fascia d'età
-    if(inputUserAgeEl.value < 18) {
+    // Aggiungo un controllo per verificare che l'utente abbia compilato tutti i campi numerici
+    if(!isNaN(userAge) && !isNaN(totKm)) {
 
-        totEuro = totEuro - ((totEuro * 20) / 100);
-        offerta = "Biglietto Scontato";
-        scontoPrevisto = "20%"
+        // Aggiungo il SE e l'ALTRIMENTI per le varie offerte in base alla fascia d'età
+        if(inputUserAgeEl.value < 18) {
     
-    } else if(inputUserAgeEl.value >= 65) {
+            totEuro = totEuro - ((totEuro * 20) / 100);
+            offerta = "Biglietto Scontato";
+            scontoPrevisto = "20%"
+        
+        } else if(inputUserAgeEl.value >= 65) {
+        
+            totEuro = totEuro - ((totEuro * 40) / 100);
+            offerta = "Biglietto Scontato";
+            scontoPrevisto = "40%"
+        
+        }
     
-        totEuro = totEuro - ((totEuro * 40) / 100);
-        offerta = "Biglietto Scontato";
-        scontoPrevisto = "40%"
+        // Generiamo il biglietto...
+        document.getElementById("passengerName").innerHTML = userName;
+        document.getElementById("offerta").innerHTML = offerta;
+        document.getElementById("totSconto").innerHTML = scontoPrevisto;
+        document.getElementById("totale").innerHTML = totEuro.toFixed(2) + "€";
     
+        document.getElementById("myTicketNone").style.display = "block";
+
+    } else {
+        console.log("Inserisci un numero in entrambi i Campi!")
     }
 
-    // Generiamo il biglietto...
-    document.getElementById("passengerName").innerHTML = userName;
-    document.getElementById("offerta").innerHTML = offerta;
-    document.getElementById("totSconto").innerHTML = scontoPrevisto;
-    document.getElementById("totale").innerHTML = totEuro.toFixed(2) + "€";
 
-    document.getElementById("myTicketNone").style.display = "block";
-
-})
+});
 
 // Aggiungo nel caso si volesse annullare il biglietto il tasto di cancella
 ticketCancelButtonEl.addEventListener("click", function() {
