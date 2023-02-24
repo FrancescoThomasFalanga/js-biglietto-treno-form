@@ -106,6 +106,10 @@ input {
     margin-top: 50px;
     font-size: 13px;
 }
+/* __________________________________________________ */ 
+#myTicketNone {
+    display: none;
+}
 /* /Styling */
 
 
