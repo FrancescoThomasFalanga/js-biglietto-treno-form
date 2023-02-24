@@ -94,4 +94,7 @@ ticketGeneratorButtonEl.addEventListener("click", function() {
 // Aggiungo nel caso si volesse annullare il biglietto il tasto di cancella
 ticketCancelButtonEl.addEventListener("click", function() {
     document.getElementById("myTicketNone").style.display = "none";
+    inputUserNameEl.value = "";
+    inputUserAgeEl.value = "";
+    inputTotKmEl.value = "";
 })
